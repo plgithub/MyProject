@@ -1,0 +1,102 @@
+-injars 'D:\SmartGit\workspace\MyProject\player_pad_new\app\build\intermediates\multi-dex\anzhi\debug\allclasses.jar'
+-outjars 'D:\SmartGit\workspace\MyProject\player_pad_new\app\build\intermediates\multi-dex\anzhi\debug\componentClasses.jar'
+
+-libraryjars 'D:\Studio_sdk\sdk\build-tools\22.0.1\lib\shrinkedAndroid.jar'
+
+-forceprocessing
+-dontoptimize
+-dontobfuscate
+-dontpreverify
+-dontwarn
+-printconfiguration 'D:\SmartGit\workspace\MyProject\player_pad_new\app\build\intermediates\multi-dex\anzhi\debug\components.flags'
+
+
+-keep class cn.pipi.mobile.pipiplayer.local.vlc.VLCApplication {
+    <init>();
+    void attachBaseContext(android.content.Context);
+}
+
+-keep class cn.pipi.mobile.pipiplayer.SplashActivity {
+    <init>();
+}
+
+-keep class cn.pipi.mobile.pipiplayer.MainActivity {
+    <init>();
+}
+
+-keep class cn.pipi.mobile.pipiplayer.SearchActivity {
+    <init>();
+}
+
+-keep class cn.pipi.mobile.pipiplayer.AdDetailActivity {
+    <init>();
+}
+
+-keep class cn.pipi.mobile.pipiplayer.MovieDetialActivity {
+    <init>();
+}
+
+-keep class cn.pipi.mobile.pipiplayer.PlayerActivity {
+    <init>();
+}
+
+-keep class cn.pipi.mobile.pipiplayer.DetialActivity {
+    <init>();
+}
+
+-keep class cn.pipi.mobile.pipiplayer.DownloadActivity {
+    <init>();
+}
+
+-keep class cn.pipi.mobile.pipiplayer.HtmlPlayer {
+    <init>();
+}
+
+-keep class cn.pipi.mobile.pipiplayer.SetActivity {
+    <init>();
+}
+
+-keep class cn.pipi.mobile.pipiplayer.local.vlc.gui.video.VideoPlayerActivity {
+    <init>();
+}
+
+-keep class cn.pipi.mobile.pipiplayer.local.vlc.gui.CompatErrorActivity {
+    <init>();
+}
+
+-keep class cn.pipi.mobile.pipiplayer.local.vlc.gui.MainLocalActivity {
+    <init>();
+}
+
+-keep class cn.pipi.mobile.pipiplayer.local.vlc.gui.BrowserActivity {
+    <init>();
+}
+
+-keep class cn.pipi.mobile.pipiplayer.local.vlc.gui.video.MediaInfoActivity {
+    <init>();
+}
+
+-keep class cn.pipi.mobile.pipiplayer.updata.UpdataService {
+    <init>();
+}
+
+-keep class cn.pipi.mobile.pipiplayer.local.vlc.AudioService {
+    <init>();
+}
+
+-keep class cn.pipi.mobile.pipiplayer.local.vlc.RemoteControlClientReceiver {
+    <init>();
+}
+
+-keep class cn.pipi.mobile.pipiplayer.HdmiListener {
+    <init>();
+}
+
+-keep public class * extends android.app.backup.BackupAgent {
+    <init>();
+}
+
+-keep public class * extends java.lang.annotation.Annotation {
+    <fields>;
+    <methods>;
+}

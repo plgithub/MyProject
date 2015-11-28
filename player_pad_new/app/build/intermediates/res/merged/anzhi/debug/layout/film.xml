@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafafa"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/film_classifylayout"
+            android:layout_width="fill_parent"
+            android:layout_height="58dp"
+            android:background="@drawable/film_classifybg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="25dp" >
+
+            <cn.pipi.mobile.pipiplayer.view.HorizontalListView
+                android:id="@+id/film_horizonlistview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.9" >
+            </cn.pipi.mobile.pipiplayer.view.HorizontalListView>
+
+            <TextView
+                android:layout_width="2px"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="2px"
+                android:background="#d3d3d3" >
+            </TextView>
+
+            <RelativeLayout
+                android:id="@+id/film_more"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/film_more" >
+                </TextView>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <cn.pipi.mobile.pipiplayer.view.PullToRefreshView
+            android:id="@+id/film_pulltorefreshview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/film_classifylayout"
+            android:orientation="vertical" >
+
+            <GridView
+                android:id="@+id/film_gridview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="30dp"
+                android:cacheColorHint="@android:color/transparent"
+                android:listSelector="@android:color/transparent"
+                android:columnWidth="220dp"
+                android:horizontalSpacing="20dp"
+                android:numColumns="5"
+                android:paddingBottom="30dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="20dp" 
+                 android:scrollbars="none"
+                >
+            </GridView>
+        </cn.pipi.mobile.pipiplayer.view.PullToRefreshView>
+        <!-- 分类更多菜单 -->
+
+        <LinearLayout
+            android:id="@+id/film_moremenu"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/film_classifylayout"
+            android:orientation="horizontal"
+            android:visibility="invisible" 
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.78"
+                android:background="@color/transparent_gray" 
+                android:focusable="true"
+                />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.26"
+                android:background="@color/white"
+                android:orientation="vertical"
+                >
+
+                <RadioGroup
+                    android:id="@+id/film_moremenurgroup"
+                    android:layout_width="fill_parent"
+                    android:layout_height="45dp"
+                    android:checkedButton="@+id/moremenu_newest"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingRight="25dp"
+                    android:paddingLeft="35dp"
+                    android:weightSum="3" >
+
+                    <RadioButton
+                        android:id="@+id/moremenu_newest"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/moremenu_radiobtnbg"
+                        android:textColor="@color/white"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="最新"
+                        android:textSize="15sp" />
+
+                    <RadioButton
+                        android:id="@+id/moremenu_hotest"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/moremenu_radiobtnbg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="最热"
+                        android:textSize="15sp" 
+                        android:layout_marginLeft="30dp"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/moremenu_grade"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/moremenu_radiobtnbg"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="评分"
+                        android:textSize="15sp" 
+                        android:layout_marginLeft="30dp"
+                        />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="#ececec" />
+
+                <ListView
+                    android:id="@+id/film_moremenulist"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:divider="@android:color/transparent" 
+                     android:paddingLeft="35dp"
+                     android:paddingRight="25dp"
+                     android:scrollbars="none"
+                    >
+                </ListView>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include layout="@layout/loading_layout" />
+
+</FrameLayout><!-- From: file:/D:/SmartGit/workspace/MyProject/player_pad_new/app/res/layout/film.xml -->

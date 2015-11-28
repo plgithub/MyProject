@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/yellow"
+     >
+     
+    <ListView
+        android:id="@+id/drawer_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:choiceMode="singleChoice"
+        android:divider="#ffcecece"
+        android:dividerHeight="1dp" 
+        android:background="@drawable/mainlistbg"
+        android:scrollbars="none"
+        android:cacheColorHint="@android:color/transparent"
+        />
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="反馈问题QQ群:219176374"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout><!-- From: file:/D:/SmartGit/workspace/MyProject/player_pad_new/app/res/layout/main_menu.xml -->

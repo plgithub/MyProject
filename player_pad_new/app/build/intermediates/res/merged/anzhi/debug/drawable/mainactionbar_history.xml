@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<selector xmlns:android="http://schemas.android.com/apk/res/android">  
+<item
+	android:state_pressed="true"
+	android:drawable= "@drawable/actionbar_history_press"/>   
+<item
+	android:state_pressed="false"
+	android:drawable="@drawable/actionbar_history"/>
+</selector><!-- From: file:/D:/SmartGit/workspace/MyProject/player_pad_new/app/res/drawable/mainactionbar_history.xml -->

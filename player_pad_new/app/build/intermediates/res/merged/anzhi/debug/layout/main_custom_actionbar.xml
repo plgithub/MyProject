@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="60dp"
+    android:background="#DC0000">
+
+    <ImageView
+        android:id="@+id/main_actionbar_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:src="@drawable/bt_menu" />
+
+    <TextView
+        android:id="@+id/main_titel"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/main_actionbar_icon"
+        android:textColor="@color/white"
+        android:gravity="center_vertical"
+        android:paddingRight="30dp"
+        android:textSize="21sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+
+
+        <ImageView
+            android:id="@+id/actionbar_search"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:src="@drawable/menu_search" />
+
+        <ImageView
+            android:id="@+id/actionbar_history"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:src="@drawable/menu_histroy" />
+
+
+        <ImageView
+            android:id="@+id/actionbar_download"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:paddingLeft="25dp"
+            android:paddingRight="35dp"
+            android:src="@drawable/menu_down" />
+    </LinearLayout>
+
+</RelativeLayout><!-- From: file:/D:/SmartGit/workspace/MyProject/player_pad_new/app/res/layout/main_custom_actionbar.xml -->

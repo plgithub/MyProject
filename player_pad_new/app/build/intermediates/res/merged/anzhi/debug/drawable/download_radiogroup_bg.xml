@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <solid android:color="@color/red" />
+
+    <corners android:radius="2dp" />
+
+    <padding
+        android:bottom="4dp"
+        android:left="4dp"
+        android:right="4dp"
+        android:top="4dp" />
+
+    <size
+        android:height="48dp"
+        android:width="268dp" />
+ <!-- 宽度和高度 -->
+
+</shape><!-- From: file:/D:/SmartGit/workspace/MyProject/player_pad_new/app/res/drawable/download_radiogroup_bg.xml -->

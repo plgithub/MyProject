@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/old_view"
+    android:layout_width="fill_parent"
+    android:layout_height="0dp"
+    android:layout_marginBottom="10dp"
+    android:layout_weight="1.5"
+    android:paddingRight="18dp"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:id="@+id/row1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="评分  "
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/oldview_person_num"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:text="评分:" />
+
+        <TextView
+            android:id="@+id/oldview_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RatingBar
+            android:id="@+id/oldview_ratingbar"
+            style="@style/pingfenbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:isIndicator="false"
+            android:isScrollContainer="false"
+            android:max="10"
+            android:numStars="5"
+            android:stepSize="0.5" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/row2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/row1"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/oldview_moviedetial_autocodeeditview"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/moviedetial_autocodeview"
+            android:hint="验证码"
+            android:inputType="number"
+            android:maxLength="4" />
+
+        <ImageView
+            android:id="@+id/oldview_moviedetial_autocodeimgview"
+            android:layout_width="58dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp" />
+
+        <Button
+            android:id="@+id/oldview_moviedetial_refreshcode"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:gravity="center"
+            android:text="换一个"
+            android:textColor="@color/blue" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/row3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/row2"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/oldview_moviedetial_revieweditview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableLeft="@drawable/moviedetial_writeicon"
+            android:drawablePadding="4dp"
+            android:ellipsize="end"
+            android:hint="发表评论"
+            android:imeOptions="flagNoExtractUi"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/oldview_moviedetial_sendreviewbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/moviedetial_send" />
+    </LinearLayout>
+
+</RelativeLayout>

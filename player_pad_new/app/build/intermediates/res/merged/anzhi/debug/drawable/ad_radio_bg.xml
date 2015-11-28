@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/image_switcher_btn_selected" android:state_checked="true"/>
+    <item android:drawable="@drawable/image_switcher_btn" />
+</selector><!-- From: file:/D:/SmartGit/workspace/MyProject/player_pad_new/app/res/drawable/ad_radio_bg.xml -->

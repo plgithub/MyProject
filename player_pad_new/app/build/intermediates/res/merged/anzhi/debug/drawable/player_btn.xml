@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <solid android:color="#ff202020" />
+
+    <corners android:radius="4dp" />
+
+    <size
+        android:height="45dp"
+        android:width="100dp" />
+
+</shape><!-- From: file:/D:/SmartGit/workspace/MyProject/player_pad_new/app/res/drawable/player_btn.xml -->

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+   android:background="@drawable/moviedetial_gridviewitembg"
+    >
+    <!--  android:background="@drawable/moviedetial_gridviewitembg" -->
+    <TextView
+        android:id="@+id/moviedetial_gridviewitem_textview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textSize="25sp" 
+        android:textColor="@color/moviedetial_gridview_item_tvbg"
+        />
+
+</RelativeLayout><!-- From: file:/D:/SmartGit/workspace/MyProject/player_pad_new/app/res/layout/moviedetial_gridview_item.xml -->

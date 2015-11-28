@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/set_switch_on" android:state_pressed="true"/>
+    <item android:drawable="@drawable/set_switch_off" android:state_pressed="false"/>
+    <item android:drawable="@drawable/set_switch_off"/>
+
+</selector><!-- From: file:/D:/SmartGit/workspace/MyProject/player_pad_new/app/res/drawable/set_switch_bg.xml -->

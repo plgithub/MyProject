@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/moviedetial_right"
+    android:layout_width="0dp"
+    android:layout_height="fill_parent"
+    android:layout_weight="0.29"
+    android:orientation="vertical"
+    android:paddingLeft="13dp">
+
+    <RadioGroup
+        android:id="@+id/movietdetial_inforadiogroup"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:checkedButton="@+id/moviedetial_inforaidobtn"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RadioButton
+            android:id="@+id/moviedetial_inforaidobtn"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/moviedetial_rightradiobtnbg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="详情"
+            android:textColor="@color/red"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/moviedetial_reviewradiobtn"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/moviedetial_rightradiobtnbg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="评论"
+            android:textSize="18sp" />
+    </RadioGroup>
+    <!--详情或评论 -->
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/moviedetial_childlayoutbg">
+
+        <ScrollView
+            android:id="@+id/moviedetial_infoscrolview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="20dp"
+            android:paddingTop="20dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/moviedetial_moviename"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="middle"
+                        android:singleLine="true"
+                        android:textSize="18sp" />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp">
+
+                        <TextView
+                            android:id="@+id/moviedetial_movieactor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_toLeftOf="@+id/moviedetial_synthesis"
+                            android:ellipsize="middle"
+                            android:singleLine="true"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/moviedetial_synthesis"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/moviedetial_desclayout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/moviedetial_moviedescribe"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_weight="1"
+                            android:ellipsize="middle"
+                            android:lineSpacingExtra="6dp"
+                            android:maxLines="6"
+                            android:textColor="@color/gray"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:id="@+id/moviedetial_expandbtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/moviedetial_moviedescribe"
+                            android:layout_marginTop="8dp"
+                            android:background="@null"
+                            android:text="展开"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <cn.pipi.mobile.pipiplayer.view.MyListView
+                    android:id="@+id/moviedetial_recommendlistview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.4"
+                    android:background="@drawable/moviedetial_recommondlistviewitem"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="4dp" />
+            </LinearLayout>
+        </ScrollView>
+        <!--获取评论 -->
+
+        <LinearLayout
+            android:id="@+id/moviedetial_reviewlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <cn.pipi.mobile.pipiplayer.view.PullToRefreshView
+                    android:id="@+id/moviedetial_reviewrefreshview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:id="@+id/moviedetial_reviewlistview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:listSelector="@android:color/transparent" />
+                </cn.pipi.mobile.pipiplayer.view.PullToRefreshView>
+
+                <TextView
+                    android:id="@+id/moviedetial_reviewtips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="无评论" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#cbcbcb"
+                android:paddingLeft="1dp"
+                android:paddingRight="1dp" />
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#f1f1f1"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:paddingLeft="5dp">
+
+                <!--  <include layout="@layout/review" />-->
+
+
+                <RelativeLayout
+                    android:id="@+id/content_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/nickname_row"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="昵称:"
+                            android:textColor="@color/gray"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/nickname"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:focusable="true"
+                            android:hint="android手机端游客"
+                            android:imeOptions="flagNoExtractUi"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/moviedetial_revieweditview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="140dp"
+                        android:layout_below="@+id/nickname_row"
+                        android:gravity="left|top"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="textMultiLine" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/moviedetial_revieweditview"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="0dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/moviedetial_autocodeeditview"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/content_row"
+                            android:layout_centerVertical="true"
+                            android:hint="验证码"
+                            android:imeOptions="flagNoExtractUi"
+                            android:inputType="number"
+                            android:maxLength="4" />
+
+                        <ImageView
+                            android:id="@+id/moviedetial_autocodeimgview"
+                            android:layout_width="58dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="15dp" />
+
+                        <Button
+                            android:id="@+id/moviedetial_refreshcode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="6dp"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:text="换一个"
+                            android:textColor="@color/blue" />
+
+                        <Button
+                            android:id="@+id/moviedetial_sendreviewbtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:background="@drawable/moviedetial_send" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mark_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.1"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/pingfen"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:clickable="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_vertical"
+                            android:text="评分  "
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/person_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_vertical" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_vertical"
+                            android:text="评分:"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/score"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="center_vertical" />
+
+                        <RatingBar
+                            android:id="@+id/ratingbar"
+                            style="@style/pingfenbar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:isIndicator="false"
+                            android:isScrollContainer="false"
+                            android:max="10"
+                            android:numStars="5"
+                            android:stepSize="0.5" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/pingfen"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/review"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:background="@null"
+                            android:drawableLeft="@drawable/moviedetial_writeicon"
+                            android:drawablePadding="4dp"
+                            android:ellipsize="end"
+                            android:gravity="left|center_vertical"
+                            android:singleLine="true"
+                            android:text="发表评论" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <!--发表评论 -->
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/moviedetial_left"
+android:layout_width="0dp"
+android:layout_height="fill_parent"
+android:layout_weight="0.52"
+android:background="@drawable/moviedetial_childlayoutbg"
+android:orientation="vertical">
+
+<RelativeLayout
+    android:id="@+id/play_container"
+    android:layout_width="fill_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.68">
+
+
+    <LinearLayout
+        android:id="@+id/moviedetial_frame_player"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/black"
+        android:orientation="vertical" />
+
+
+    <ImageView
+        android:id="@+id/moviedetial_play"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/moviedetial_play" />
+
+    <LinearLayout
+        android:id="@+id/movie_info_ad"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/movie_info_ad_img"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="90dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/movie_info_ad_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="简爱"
+                    android:textColor="@color/white"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/movie_info_ad_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="aaaaaaaaaaaaa"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/movie_info_ad_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/bg_black"
+                    android:gravity="center"
+                    android:text="下载"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:text="推广"
+                    android:textColor="@color/red"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
+
+<!--来源和排序-->
+
+<RelativeLayout
+    android:id="@+id/moviedetial_sourcelayout"
+    android:layout_width="fill_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.08">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#e1e1e1" />
+
+    <RadioGroup
+        android:id="@+id/moviedetial_selectradiogroup"
+        android:layout_width="200dp"
+        android:layout_height="fill_parent"
+        android:checkedButton="@+id/moviedetial_selectbtn1"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RadioButton
+            android:id="@+id/moviedetial_selectbtn1"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/moviedetial_selectbtnbg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="选集"
+            android:textColor="@color/red" />
+
+        <RadioButton
+            android:id="@+id/moviedetial_selectbtn2"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/moviedetial_selectbtnbg"
+            android:button="@null"
+            android:gravity="center"
+            android:text="下载"
+            android:textColor="@color/black" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="25dp">
+
+        <Button
+            android:id="@+id/moviedetial_store"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/moviedetial_store" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/moviedetial_share"
+            android:visibility="gone" />
+    </LinearLayout>
+</RelativeLayout>
+
+<ScrollView
+    android:id="@+id/moviedetial_scrollview"
+    android:layout_width="fill_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.3"
+    android:fillViewport="false">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <!--来源 -->
+
+        <RelativeLayout
+            android:id="@+id/moviedetial_currentsourcelayout"
+            android:layout_width="fill_parent"
+            android:layout_height="70dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/moviedetial_sourceselectlayout"
+                android:layout_width="200dp"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="45dp">
+
+                <ImageView
+                    android:id="@+id/moviedetial_currentsourceimgview"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical" />
+
+                <TextView
+                    android:id="@+id/moviedetial_currentsourcekey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/moviedetial_source_shadowimgview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/moviedetial_sourceshadow_down"
+                    android:gravity="center_vertical" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/moviedetial_descbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:drawableLeft="@drawable/moviedetial_arraw_down"
+                android:paddingBottom="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="36dp"
+                android:paddingTop="5dp"
+                android:text="倒序"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <!--cn.pipi.mobile.pipiplayer.view.MyGridView -->
+
+        <cn.pipi.mobile.pipiplayer.view.MyGridView
+            android:id="@+id/moviedetial_sourcegridview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/moviedetial_sourcebg"
+            android:cacheColorHint="@android:color/transparent"
+            android:columnWidth="60dp"
+            android:gravity="center"
+            android:horizontalSpacing="35dp"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="5"
+            android:paddingBottom="15dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingTop="25dp"
+            android:verticalSpacing="20dp"
+            android:visibility="gone" />
+
+        <!--android:listSelector="@android:color/transparent" -->
+
+        <cn.pipi.mobile.pipiplayer.view.MyGridView
+            android:id="@+id/moviedetial_gridview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:columnWidth="70dp"
+            android:horizontalSpacing="28dp"
+            android:numColumns="9"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:verticalSpacing="20dp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="10dp"
+            android:visibility="invisible" />
+    </LinearLayout>
+</ScrollView>
+</LinearLayout><!-- From: file:/D:/SmartGit/workspace/MyProject/player_pad_new/app/res/layout/left_layout.xml -->

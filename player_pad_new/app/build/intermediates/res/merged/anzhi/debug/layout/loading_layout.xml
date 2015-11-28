@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/loadinglayout"
+    android:layout_gravity="center"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical"
+    >
+    <!--  style="?android:attr/progressBarStyleLarge" -->
+    <ProgressBar
+        android:id="@+id/loading_process_dialog_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        android:indeterminateDuration="1000"
+        android:indeterminateDrawable="@drawable/comon_progressbar_indeterminatebg" 
+        android:background="@drawable/common_progressbar_bg"
+        />
+
+   
+    
+</LinearLayout><!-- From: file:/D:/SmartGit/workspace/MyProject/player_pad_new/app/res/layout/loading_layout.xml -->

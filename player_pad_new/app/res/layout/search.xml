@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fafafa"
+    android:orientation="vertical" >
+
+    <!-- android:background="#fafafa" -->
+
+    <RelativeLayout
+        android:id="@+id/search_headerlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#DC0000"
+        android:focusable="true"
+        android:focusableInTouchMode="true" >
+
+        <Button
+            android:id="@+id/searchbar_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/moviedetial_back" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="100dp"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/search_editview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/searchbar_itembg"
+                android:drawableLeft="@drawable/searchicon"
+                android:drawablePadding="10dp"
+                android:hint="演员名,电影名,导演名"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="8dp" />
+
+            <Button
+                android:id="@+id/searchbar_searchbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/search_searchbtn" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/search_line"
+        android:layout_width="fill_parent"
+        android:layout_height="2px"
+        android:layout_below="@+id/search_headerlayout"
+        android:background="#d3d3d3" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/search_line" >
+
+        <!-- 热门搜索 和播放历史 -->
+
+        <LinearLayout
+            android:id="@+id/hot_history_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="75dp"
+            android:paddingRight="75dp"
+            android:paddingTop="40dp" >
+
+            <!-- 热门搜索 -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="75dp"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:text="热门搜索"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="@drawable/search_del"
+                        android:visibility="invisible" />
+                </FrameLayout>
+
+                <cn.pipi.mobile.pipiplayer.view.FlowLayout
+                    xmlns:f="http://schemas.android.com/apk/res/cn.pipi.mobile.pipiplayer.hd"
+                    android:id="@+id/search_hotflowlayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    f:horizontalSpacing="8dp"
+                    f:verticalSpacing="8dp" />
+            </LinearLayout>
+            <!-- 搜索历史 -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:text="历史记录"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/search_clearhistorybtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="@drawable/search_del" />
+                </FrameLayout>
+
+                <cn.pipi.mobile.pipiplayer.view.FlowLayout
+                    android:id="@+id/search_historyflowlayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 搜索结果 -->
+
+        <LinearLayout
+            android:id="@+id/search_resultlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:paddingTop="25dp"
+            android:visibility="invisible" >
+
+            <cn.pipi.mobile.pipiplayer.view.HorizontalListView
+                android:id="@+id/search_horizonlistview"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp" />
+
+            <GridView
+                android:id="@+id/search_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:cacheColorHint="@android:color/transparent"
+                android:columnWidth="184dp"
+                android:horizontalSpacing="24dp"
+                android:numColumns="5"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="25dp" >
+            </GridView>
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/search_line"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="100dp"
+        android:orientation="horizontal" >
+
+        <ListView
+            android:id="@+id/search_listview"
+            android:layout_width="354dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/search_searchbtn"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<selector xmlns:android="http://schemas.android.com/apk/res/android">  
+<item
+	android:state_pressed="true"
+	android:drawable= "@drawable/search_textviewbg_press"/>   
+<item
+	android:state_pressed="false"
+	android:drawable="@drawable/search_textviewbg"/>
+</selector><!-- From: file:/D:/SmartGit/workspace/MyProject/player_pad_new/app/res/drawable/search_flowlayout_textviewbg.xml -->
