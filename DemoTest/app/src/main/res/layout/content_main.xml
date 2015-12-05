@@ -1,20 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_main"
-    tools:context="com.example.administrator.demotest.MainActivity">
+    tools:context="com.example.administrator.demotest.MainActivity"
+    tools:showIn="@layout/activity_main">
 
-    <TextView
-        android:text="Hello World!"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <!-- <com.example.administrator.view.MyTextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Hello World!" />
+
+     <com.example.administrator.view.PLTextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Hello World!Hello World!Hello World!Hello World!Hello World!" />-->
+
+    <com.example.administrator.view.TopBar xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#2ad19c"
+        custom:leftBackground="#0022ff"
+        custom:leftText="LeftButton"
+        custom:leftTextColor="#FFF000"
+        custom:rightBackground="#0022ff"
+        custom:rightText="RightButton"
+        custom:rightTextColor="#FF00FF"
+        custom:titleTextColor="#FFAA00"
+        custom:titleTextSize="25sp"
+        custom:topbartitle="TopBar" />
 </RelativeLayout>
