@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="D:\SmartGit\workspace\MyProject\player_pad_new\app\src\androidTest\res"/><source path="D:\SmartGit\workspace\MyProject\player_pad_new\app\build\generated\res\rs\androidTest\anzhi\debug"/><source path="D:\SmartGit\workspace\MyProject\player_pad_new\app\build\generated\res\resValues\androidTest\anzhi\debug"/></dataSet><dataSet config="androidTestAnzhi"><source path="D:\SmartGit\workspace\MyProject\player_pad_new\app\src\androidTestAnzhi\res"/></dataSet><mergedItems/></merger>
